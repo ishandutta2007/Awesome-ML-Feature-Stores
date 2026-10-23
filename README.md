@@ -28,6 +28,7 @@
 - [🎯 Core Failure Modes Solved by Feature Stores](#-core-failure-modes-solved-by-feature-stores)
 - [🧠 Evaluation Framework: When Do You Actually Need One?](#-evaluation-framework-when-do-you-actually-need-one)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [📜 Disclaimer](#-disclaimer)
 
@@ -178,6 +179,16 @@ Contributions are warmly welcomed! Help keep this repository the definitive guid
 3. ✏️ **Add your entry** adhering to the existing tabular or bulleted format with verified starting prices, specific trial limits, and official documentation links.
 4. 🔍 For additional curated developer lists, explore [Awesome Awesome Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
 5. 📬 **Submit a Pull Request** with a concise summary of why the addition is valuable to the community.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for exploring and using this repository! If you find this curated directory helpful for your machine learning workflows, data architecture, or production MLOps engineering, please consider supporting the project:
+
+- ⭐ **Star this repository** on GitHub to show your appreciation and help others discover it.
+- 🔀 **Fork & Share** it with your colleagues, MLOps engineers, and data science community.
+- ☕ **Buy me a coffee / Sponsor**: You can sponsor ongoing maintenance and open-source updates via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
 
 ---
 
