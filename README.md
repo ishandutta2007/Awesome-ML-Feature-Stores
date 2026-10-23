@@ -2,7 +2,7 @@
 
 # Awesome-ML-Feature-Stores
 
-# Top ML Feature Stores Ecosystem
+## Top ML Feature Stores Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Point-in-Time Correctness, Online/Offline Serving & Training-Serving Skew Prevention*  
