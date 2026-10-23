@@ -1,0 +1,343 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%" style="background:#070B14; border-radius:16px; overflow:hidden;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060A12" />
+      <stop offset="50%" stop-color="#0B1222" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Flow Line Gradient -->
+    <linearGradient id="flowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="flowGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <linearGradient id="flowGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="flowGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Hub Gradients -->
+    <linearGradient id="hubBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="hubBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1E38" />
+      <stop offset="100%" stop-color="#14182E" />
+    </linearGradient>
+    <linearGradient id="coreDiamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#7928CA" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Ambient Radial Glows -->
+    <radialGradient id="ambientCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambientViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambientEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#1E293B" stroke-width="0.65" stroke-opacity="0.45" />
+    </pattern>
+
+    <style>
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", Helvetica, Arial, sans-serif;
+      }
+      .flowing-dash {
+        stroke-dasharray: 6 8;
+        animation: flowDash 3s linear infinite;
+      }
+      @keyframes flowDash {
+        from { stroke-dashoffset: 28; }
+        to { stroke-dashoffset: 0; }
+      }
+      .pulse-slow {
+        animation: pulseOpacity 4s ease-in-out infinite;
+      }
+      @keyframes pulseOpacity {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.28; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="450" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle High-Tech Grid -->
+  <rect width="1200" height="450" rx="16" fill="url(#gridPattern)" />
+
+  <!-- Ambient Light Halos (Dynamic Pulsing) -->
+  <circle cx="200" cy="100" r="180" fill="url(#ambientCyan)" class="pulse-slow" />
+  <circle cx="940" cy="225" r="220" fill="url(#ambientViolet)" class="pulse-slow" />
+  <circle cx="1120" cy="110" r="160" fill="url(#ambientEmerald)" class="pulse-slow" />
+
+  <!-- ======================================================== -->
+  <!-- LAYER 1: ARCHITECTURE PIPELINE (RIGHT SIDE: X: 660-1185)   -->
+  <!-- ======================================================== -->
+
+  <!-- Flow Tracks (Underneath) -->
+  <g opacity="0.35">
+    <!-- Stream -> Hub -->
+    <path d="M 820 108 C 845 108, 840 195, 865 195" fill="none" stroke="#0284C7" stroke-width="2.5" />
+    <!-- Batch -> Hub -->
+    <path d="M 820 338 C 845 338, 840 255, 865 255" fill="none" stroke="#6366F1" stroke-width="2.5" />
+    <!-- Hub -> Online -->
+    <path d="M 1020 195 C 1045 195, 1020 108, 1045 108" fill="none" stroke="#10B981" stroke-width="2.5" />
+    <!-- Hub -> Offline -->
+    <path d="M 1020 255 C 1045 255, 1020 338, 1045 338" fill="none" stroke="#A855F7" stroke-width="2.5" />
+  </g>
+
+  <!-- Animated Dashed Flow Lines -->
+  <g>
+    <!-- Stream -> Hub -->
+    <path d="M 820 108 C 845 108, 840 195, 865 195" fill="none" stroke="url(#flowGrad1)" stroke-width="2" class="flowing-dash" />
+    <!-- Batch -> Hub -->
+    <path d="M 820 338 C 845 338, 840 255, 865 255" fill="none" stroke="url(#flowGrad2)" stroke-width="2" class="flowing-dash" />
+    <!-- Hub -> Online -->
+    <path d="M 1020 195 C 1045 195, 1020 108, 1045 108" fill="none" stroke="url(#flowGrad3)" stroke-width="2" class="flowing-dash" />
+    <!-- Hub -> Offline -->
+    <path d="M 1020 255 C 1045 255, 1020 338, 1045 338" fill="none" stroke="url(#flowGrad4)" stroke-width="2" class="flowing-dash" />
+  </g>
+
+  <!-- Moving Data Packet Particles (Dynamic SMIL Animation) -->
+  <!-- Stream Ingest to Core -->
+  <circle r="3.5" fill="#38BDF8" filter="url(#glowCyan)">
+    <animateMotion path="M 820 108 C 845 108, 840 195, 865 195" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.5" fill="#E0F2FE">
+    <animateMotion path="M 820 108 C 845 108, 840 195, 865 195" dur="1.8s" begin="0.9s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Batch Ingest to Core -->
+  <circle r="3.5" fill="#818CF8">
+    <animateMotion path="M 820 338 C 845 338, 840 255, 865 255" dur="2.2s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.5" fill="#EEF2FF">
+    <animateMotion path="M 820 338 C 845 338, 840 255, 865 255" dur="2.2s" begin="1.1s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Core to Online Store (<10ms) -->
+  <circle r="3.5" fill="#34D399" filter="url(#glowGreen)">
+    <animateMotion path="M 1020 195 C 1045 195, 1020 108, 1045 108" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.5" fill="#D1FAE5">
+    <animateMotion path="M 1020 195 C 1045 195, 1020 108, 1045 108" dur="1.5s" begin="0.75s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Core to Offline Store (Lakehouse) -->
+  <circle r="3.5" fill="#C084FC" filter="url(#glowPurple)">
+    <animateMotion path="M 1020 255 C 1045 255, 1020 338, 1045 338" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.5" fill="#F3E8FF">
+    <animateMotion path="M 1020 255 C 1045 255, 1020 338, 1045 338" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Node 1: Stream Ingest Card -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="4s" repeatCount="indefinite" />
+    <rect x="670" y="75" width="150" height="66" rx="10" fill="#0A1324" stroke="#0284C7" stroke-width="1.3" />
+    <circle cx="688" cy="94" r="5" fill="#0284C7" />
+    <circle cx="688" cy="94" r="2" fill="#BAE6FD" />
+    <text x="700" y="97" class="font-sans" font-size="10" font-weight="700" fill="#38BDF8" letter-spacing="1">STREAM INGEST</text>
+    <text x="688" y="117" class="font-sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Kafka • Kinesis</text>
+    <text x="688" y="131" class="font-sans" font-size="9" fill="#64748B">Sub-second event stream</text>
+  </g>
+
+  <!-- Node 2: Batch Ingest Card -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,3; 0,0" dur="4.2s" repeatCount="indefinite" />
+    <rect x="670" y="305" width="150" height="66" rx="10" fill="#0D1127" stroke="#6366F1" stroke-width="1.3" />
+    <circle cx="688" cy="324" r="5" fill="#6366F1" />
+    <circle cx="688" cy="324" r="2" fill="#E0E7FF" />
+    <text x="700" y="327" class="font-sans" font-size="10" font-weight="700" fill="#818CF8" letter-spacing="1">BATCH INGEST</text>
+    <text x="688" y="347" class="font-sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Snowflake • Delta</text>
+    <text x="688" y="361" class="font-sans" font-size="9" fill="#64748B">High-volume lakehouse</text>
+  </g>
+
+  <!-- Node 3: Center Feature Store Hub -->
+  <g>
+    <!-- Hub Shadow & Glow -->
+    <rect x="862" y="157" width="161" height="136" rx="16" fill="none" stroke="url(#hubBorderGrad)" stroke-width="2.2" opacity="0.9" />
+    <rect x="865" y="160" width="155" height="130" rx="14" fill="url(#hubBgGrad)" />
+
+    <!-- Center Spinning Core Diamond -->
+    <g transform="translate(942.5, 186)">
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#38BDF8" stroke-width="1.2" opacity="0.6">
+        <animate attributeName="r" values="10; 18; 10" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8; 0.1; 0.8" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <rect x="-7.5" y="-7.5" width="15" height="15" rx="3" fill="url(#coreDiamondGrad)">
+        <animateTransform attributeName="transform" type="rotate" from="45 0 0" to="405 0 0" dur="8s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <text x="942.5" y="217" text-anchor="middle" class="font-sans" font-size="11" font-weight="800" fill="#FFFFFF" letter-spacing="0.8">FEATURE STORE</text>
+    <text x="942.5" y="230" text-anchor="middle" class="font-sans" font-size="9" font-weight="700" fill="#38BDF8" letter-spacing="0.5">ENGINE &amp; REGISTRY</text>
+
+    <!-- Hub Badges -->
+    <rect x="877" y="240" width="131" height="18" rx="9" fill="#1E293B" fill-opacity="0.7" />
+    <text x="942.5" y="253" text-anchor="middle" class="font-sans" font-size="8.5" font-weight="600" fill="#94A3B8">⏱️ AS-OF Point-in-Time</text>
+
+    <rect x="877" y="263" width="131" height="18" rx="9" fill="#1E293B" fill-opacity="0.7" />
+    <text x="942.5" y="276" text-anchor="middle" class="font-sans" font-size="8.5" font-weight="600" fill="#34D399">🛡️ Skew Prevention</text>
+  </g>
+
+  <!-- Node 4: Online Store Card (Real-Time Serving) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3.5; 0,0" dur="3.8s" repeatCount="indefinite" />
+    <rect x="1045" y="75" width="145" height="66" rx="10" fill="#061A19" stroke="#10B981" stroke-width="1.3" />
+    <!-- Live indicator -->
+    <circle cx="1063" cy="94" r="5" fill="#10B981">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1063" cy="94" r="8" fill="none" stroke="#10B981" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="5;11;5" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="1076" y="97" class="font-sans" font-size="10" font-weight="700" fill="#34D399" letter-spacing="1">ONLINE STORE</text>
+    <text x="1060" y="117" class="font-sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Redis • DynamoDB</text>
+    <text x="1060" y="131" class="font-sans" font-size="9" fill="#6EE7B7">⚡ Sub-10ms P99 SLA</text>
+  </g>
+
+  <!-- Node 5: Offline Store Card (Historical & Training) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,3.5; 0,0" dur="4.5s" repeatCount="indefinite" />
+    <rect x="1045" y="305" width="145" height="66" rx="10" fill="#140D26" stroke="#A855F7" stroke-width="1.3" />
+    <circle cx="1063" cy="324" r="5" fill="#A855F7" />
+    <circle cx="1063" cy="324" r="2" fill="#F3E8FF" />
+    <text x="1076" y="327" class="font-sans" font-size="10" font-weight="700" fill="#C084FC" letter-spacing="1">OFFLINE STORE</text>
+    <text x="1060" y="347" class="font-sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Parquet • BigQuery</text>
+    <text x="1060" y="361" class="font-sans" font-size="9" fill="#D8B4FE">🎓 Zero-Leakage Dataset</text>
+  </g>
+
+  <!-- Ambient Floating Indicator Chips (Non-overlapping peripheral elements) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-4; 0,0" dur="3.6s" repeatCount="indefinite" />
+    <rect x="705" y="36" width="105" height="22" rx="11" fill="#0C1B2E" stroke="#0284C7" stroke-width="0.8" />
+    <circle cx="718" cy="47" r="3" fill="#38BDF8" />
+    <text x="727" y="51" class="font-sans" font-size="9" font-weight="600" fill="#7DD3FC">Streaming API</text>
+  </g>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,4; 0,0" dur="4.2s" repeatCount="indefinite" />
+    <rect x="1065" y="36" width="112" height="22" rx="11" fill="#09281C" stroke="#059669" stroke-width="0.8" />
+    <circle cx="1077" cy="47" r="3" fill="#10B981" />
+    <text x="1086" y="51" class="font-sans" font-size="9" font-weight="600" fill="#6EE7B7">p99 &lt; 5ms Active</text>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- LAYER 2: FOREGROUND TITLE, SUBTITLE & METRICS (X: 55-640) -->
+  <!-- Strictly rendered in the foreground with zero overlap     -->
+  <!-- ======================================================== -->
+  <g id="foreground-content">
+
+    <!-- Category Tag / Top Badge -->
+    <g transform="translate(55, 48)">
+      <rect x="0" y="0" width="375" height="30" rx="15" fill="#0F172A" stroke="#334155" stroke-width="1.2" />
+      <!-- Pulsing Beacon Dot -->
+      <circle cx="16" cy="15" r="4" fill="#10B981" />
+      <circle cx="16" cy="15" r="7" fill="none" stroke="#10B981" stroke-width="1.2" opacity="0.6">
+        <animate attributeName="r" values="4; 10; 4" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8; 0; 0.8" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="32" y="19" class="font-sans" font-size="10.5" font-weight="700" fill="#38BDF8" letter-spacing="1.2">CURATED MLOPS &amp; DATA ARCHITECTURE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="55" y="128" class="font-sans" font-size="44" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      Awesome ML
+    </text>
+    <text x="55" y="178" class="font-sans" font-size="44" font-weight="800" fill="url(#titleGrad)" letter-spacing="-0.5">
+      Feature Stores
+    </text>
+
+    <!-- Subtitle (Clear, Readable Slate-300 / 400) -->
+    <text x="55" y="218" class="font-sans" font-size="15.5" font-weight="400" fill="#94A3B8">
+      Real-time low-latency serving, dual offline lakehouses, and
+    </text>
+    <text x="55" y="240" class="font-sans" font-size="15.5" font-weight="400" fill="#94A3B8">
+      zero-leakage point-in-time time travel for production AI.
+    </text>
+
+    <!-- Subtle Accent Line -->
+    <line x1="55" y1="266" x2="630" y2="266" stroke="#1E293B" stroke-width="1.2" />
+
+    <!-- Feature Pillars (4 Glass Badges in 2 Rows) -->
+    <!-- Row 1 -->
+    <g transform="translate(55, 284)">
+      <!-- Pill 1: Sub-10ms Serving -->
+      <rect x="0" y="0" width="275" height="42" rx="9" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1.2" />
+      <text x="14" y="20" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">⚡ Sub-10ms Real-Time Serving</text>
+      <text x="14" y="34" class="font-sans" font-size="10" font-weight="500" fill="#38BDF8">Redis • Bigtable • DynamoDB</text>
+
+      <!-- Pill 2: AS-OF Joins -->
+      <rect x="290" y="0" width="285" height="42" rx="9" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1.2" />
+      <text x="304" y="20" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">⏱️ Point-in-Time Correctness</text>
+      <text x="304" y="34" class="font-sans" font-size="10" font-weight="500" fill="#C084FC">Zero-Leakage AS-OF Joins</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(55, 338)">
+      <!-- Pill 3: Skew Prevention -->
+      <rect x="0" y="0" width="275" height="42" rx="9" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1.2" />
+      <text x="14" y="20" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">🛡️ Training-Serving Consistency</text>
+      <text x="14" y="34" class="font-sans" font-size="10" font-weight="500" fill="#34D399">Unified Transformation Pipelines</text>
+
+      <!-- Pill 4: Directory Ecosystem -->
+      <rect x="290" y="0" width="285" height="42" rx="9" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B" stroke-width="1.2" />
+      <text x="304" y="20" class="font-sans" font-size="12" font-weight="700" fill="#F8FAFC">📦 SaaS &amp; Open-Source Directory</text>
+      <text x="304" y="34" class="font-sans" font-size="10" font-weight="500" fill="#F472B6">Feast • Tecton • Chalk • Hopsworks</text>
+    </g>
+
+    <!-- Bottom Meta / Tags -->
+    <text x="55" y="415" class="font-sans" font-size="11.5" font-weight="600" fill="#475569" letter-spacing="0.3">
+      30+ CATALOGED PLATFORMS  •  CLOUD HYPERSCALERS  •  ENTERPRISE MLOPS BLUEPRINTS
+    </text>
+
+  </g>
+
+  <!-- Outer Border Frame -->
+  <rect x="1" y="1" width="1198" height="448" rx="15" fill="none" stroke="#1E293B" stroke-width="1.5" />
+</svg>
