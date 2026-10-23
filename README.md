@@ -97,7 +97,7 @@ A **Machine Learning Feature Store** is a specialized data management architectu
 
 ## 💻 Open-Source GitHub Projects
 
-*The leading open-source feature stores, feature transformation engines, and lineage platforms, ranked in descending order by **GitHub Stars_Count**.*
+*The leading open-source feature stores, feature transformation engines, and lineage platforms, ranked in descending order by **GitHub_Stars_Count**.*
 
 - 🌟 **[Feast](https://github.com/feast-dev/feast)** [![Stars](https://img.shields.io/github/stars/feast-dev/feast?style=social&color=white)](https://github.com/feast-dev/feast/stargazers)  
   **The open-source standard for feature stores, cloud-agnostic and code-first.** Features are declaratively authored in Python, decoupling model training and inference pipelines from backend infrastructure. Operates a dual-store architecture with an offline store (Snowflake, BigQuery, Redshift, Spark, DuckDB) for historical extraction and a low-latency online store (Redis, DynamoDB, Bigtable, PostgreSQL) for real-time serving. Includes point-in-time joins (`get_historical_features`) with AS-OF semantics to prevent label leakage, dbt model ingestion, and push-based online materialization.
